@@ -49,6 +49,7 @@ var json2 ={
 };
 
 function compareObj(obja, objb) {
+	console.log(obja);
     for (var key in obja) {
     	if (obja[key] != null) {
 	        if (typeof obja[key] == 'object') {
