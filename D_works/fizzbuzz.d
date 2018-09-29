@@ -1,7 +1,6 @@
 import std.stdio;
 
-void fizzBuzz()
-{
+void fizzBuzz() {
     for (auto i = 1; i <= 100; ++i) {
         if (i % 15 == 0) {
             writeln("FizzBazz!");
@@ -15,7 +14,6 @@ void fizzBuzz()
     }
 }
 
-void main()
-{
+void main() {
     fizzBuzz();
 }
