@@ -99,20 +99,35 @@ public class ArrayDataBuilder {
 			InputStream is = getClass().getClassLoader().getResourceAsStream(fileName);
 			bf = new BufferedReader(new InputStreamReader(is, "UTF-8"));
 			String str = null;
-			for (int i = 0; (str = bf.readLine()) != null; i++) {inputItem[i] = str;}
+
+			for (int i = 0; (str = bf.readLine()) != null; i++) {
+				inputItem[i] = str;
+			}
+
 			for (int i = 0; i < inputItem.length; i++) {
-				if (inputItem[i] == null) {inputItem[i] = "";}
-			}bf.close();}
-		catch (FileNotFoundException e) {return null;} 
-		catch (NullPointerException e) {return null;} 
-		catch (IOException e) {return null;}
+				if (inputItem[i] == null) {
+					inputItem[i] = "";
+				}
+			}
+
+			bf.close();
+
+		} catch (FileNotFoundException e) {
+			return null;
+		} catch (NullPointerException e) {
+			return null;
+		} catch (IOException e) {
+			return null;
+		}
+
 		return inputItem;
 	}
 
 	// ファイルをロードして配列に返還
 	public String[] loadAndCreate3(String addless){
 		int line = LineGetters(addless);
-		String[] Box = loadAndCreate2(addless,line);return Box;
+		String[] Box = loadAndCreate2(addless,line);
+		return Box;
 	}
 
 	// ファイルをロードしてその行数を取得
@@ -147,13 +162,11 @@ public class ArrayDataBuilder {
 				subBox[i] = subject[i];
 			}
 		}
-
 		return subBox;
 	}
 	
 	public void p(String str) {
 		System.out.println(str);
 		System.out.println();
-
 	}
 }
