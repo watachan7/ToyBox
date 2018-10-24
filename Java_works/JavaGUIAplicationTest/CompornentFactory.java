@@ -10,7 +10,6 @@ import javax.swing.JTextArea;
 
 public class CompornentFactory {
 	
-	// AI-Sphereのパネル
 	public JPanel sphere(JTextArea sfias) {
 
 		sfias.setLineWrap(true);
@@ -26,7 +25,6 @@ public class CompornentFactory {
 		return jp;
 	}
 	
-	// ユーザーのパネル生成
 	public JPanel user(JTextArea users) {
 
 		users.setLineWrap(true);
@@ -40,7 +38,6 @@ public class CompornentFactory {
 		return jp;
 	}
 	
-	// 各ボタンを作成
 	public JButton createButton(String ImageName,int setX,int setY,int width,int height){
 
 		final JButton but = new JButton();
