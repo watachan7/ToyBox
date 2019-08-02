@@ -12,7 +12,6 @@ frame1 = ttk.Frame(
     borderwidth=5)
 frame1.grid()
 
-# こんな定義方法もできる
 # frame1 = ttk.Frame(root)
 # frame1['height'] = 200
 # frame1['width'] = 300
